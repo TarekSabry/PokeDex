@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Moves" representedClassName="Moves" syncable="YES">
+        <attribute name="moveLearnType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moveName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="poke" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Poke" inverseName="moves" inverseEntity="Poke" syncable="YES"/>
+    </entity>
+    <entity name="Poke" representedClassName="Poke" syncable="YES">
+        <attribute name="attack" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defense" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nextEvolution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nextEvolutionID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="moves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Moves" inverseName="poke" inverseEntity="Moves" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Poke" positionX="-54" positionY="-9" width="128" height="208"/>
+        <element name="Moves" positionX="187" positionY="18" width="128" height="88"/>
+    </elements>
+</model>
